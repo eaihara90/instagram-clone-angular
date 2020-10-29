@@ -1,19 +1,21 @@
-<h3>{{ username?.name }}</h3>
+<div class="user-page">
 
-<ul class="user-page__list">
-    <li class="user-page__list-item">
-        <a [routerLink]="['/', username?.name]" class="user-page__list-link">Posts</a>
-    </li>
+    <h3>{{ username?.name }}</h3>
 
-    <li class="user-page__list-item">
-        <a [routerLink]="['tagged']" class="user-page__list-link">Tagged</a>
-    </li>
-</ul>
+    <ul class="user-page__list">
+        <li class="user-page__list-item" [ngClass]="{ 'active': router.isActive(username.name, true) }">
+            <a [routerLink]="['', username?.name]" class="user-page__list-link">POSTS</a>
+        </li>
 
+        <li class="user-page__list-item" [ngClass]="{ 'active': router.isActive(username?.name + '/tagged', true) }">
+            <a [routerLink]="['', username?.name, 'tagged']" class="user-page__list-link">TAGGED</a>
+        </li>
+    </ul>
 
+    <div class="user-page__content">
 
-<div class="user-page__content">
+        <router-outlet></router-outlet>
 
-    <router-outlet></router-outlet>
+    </div>
 
 </div>

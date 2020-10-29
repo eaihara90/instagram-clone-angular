@@ -6,7 +6,7 @@ import { UserPostsComponent } from './components/user-posts/user-posts.component
 import { UserTaggedComponent } from './components/user-tagged/user-tagged.component';
 
 const routes: Routes = [
-    { path: ':username', component: UserPageComponent, children: [
+    { path: '', component: UserPageComponent, children: [
         { path: '', component: UserPostsComponent },
         { path: 'tagged', component: UserTaggedComponent }
     ]}

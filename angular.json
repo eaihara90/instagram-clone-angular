@@ -145,6 +145,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "instagram-clone-angular"
+    }
+  },
+  "defaultProject": "instagram-clone-angular",
+  "cli": {
+    "analytics": "9d746603-b4eb-4c0d-96e3-c36cdd7a6663"
+  }
 }

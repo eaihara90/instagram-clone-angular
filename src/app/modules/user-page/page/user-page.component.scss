@@ -1,34 +1,30 @@
+@import '../../../../assets/styles/main.scss';
+
 .user-page {
 
     &__list {
         
+        align-items: center;
+        border-top: 1px solid #ccc;
         display: flex;
-        justify-content: center;
+        justify-content: stretch;
         
-
         &-item {
 
-            list-style: none;
-            
-            &:not(:last-child) {
-                margin-right: 10px;
+            display: block;
+            flex: 1 1 auto;
+            margin-top: -1px;
+            padding: 10px 0;
+            text-align: center;
+
+            &.active {
+                border-top: 1px solid $black;
             }
         }
 
         &-link {
-
-            background-color: #222;
             border-radius: 5px;
-            color: white;
             display: block;
-            padding: 10px;
-            text-decoration: none;
-
-            
-
-            &:visited {
-                color: inherit;
-            }
         }
     }
 
@@ -37,16 +33,25 @@
     }
 }
 
-// @media only screen and(max-width: 736px) {
-//     .user-content {
-//         width: calc(100% - 60px);
-//         margin: 0 auto;
-//     }
-// }
+@media only screen and(min-width: 400px) {
+    .user-page {
+        padding: 1rem .5rem 0;
+    }
+}
 
-// @media only screen and(min-width: 736px) {
-//     .user-content {
-//         width: calc(100% - 100px);
-//         margin: 0 auto;
-//     }
-// }
+@media screen and(min-width: 736px) {
+    .user-page {
+
+        padding: 3rem 2rem 0;
+
+        &__list {
+
+            &-item {
+                
+                &:not(:last-child) {
+                    margin-right: 6rem;
+                }
+            }
+        }
+    }
+}
