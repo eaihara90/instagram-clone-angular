@@ -1,0 +1,52 @@
+.user-page {
+
+    &__list {
+        
+        display: flex;
+        justify-content: center;
+        
+
+        &-item {
+
+            list-style: none;
+            
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+
+        &-link {
+
+            background-color: #222;
+            border-radius: 5px;
+            color: white;
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+
+            
+
+            &:visited {
+                color: inherit;
+            }
+        }
+    }
+
+    &__content {
+        width: 100%;
+    }
+}
+
+// @media only screen and(max-width: 736px) {
+//     .user-content {
+//         width: calc(100% - 60px);
+//         margin: 0 auto;
+//     }
+// }
+
+// @media only screen and(min-width: 736px) {
+//     .user-content {
+//         width: calc(100% - 100px);
+//         margin: 0 auto;
+//     }
+// }
