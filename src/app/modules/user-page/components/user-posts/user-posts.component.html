@@ -1,1 +1,13 @@
-<p>user-posts works!</p>
+<div class="user-posts">
+
+    <div class="user-posts__row" *ngFor="let row of rows; let post = index">
+        
+        <div class="user-posts__col" *ngFor="let post of row">
+
+            <app-post [post]="post"></app-post>
+
+        </div>
+        
+    </div>
+
+</div>

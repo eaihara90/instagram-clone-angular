@@ -1,0 +1,19 @@
+@import '../../../../../assets/styles/main.scss';
+
+.user-posts {
+
+    &__row {
+        display: flex;
+        flex-flow: row nowrap;
+        margin-bottom: .3rem;
+    }
+
+    &__col {
+        
+        width: 33%;
+
+        &:not(:last-child) {
+            margin-right: .3rem;
+        }
+    }
+}
